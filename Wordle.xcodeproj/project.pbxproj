@@ -13,6 +13,8 @@
 		DA996E4528645236009A250B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA996E4328645236009A250B /* Main.storyboard */; };
 		DA996E4728645238009A250B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA996E4628645238009A250B /* Assets.xcassets */; };
 		DA996E4A28645238009A250B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA996E4828645238009A250B /* LaunchScreen.storyboard */; };
+		DA996E5228645824009A250B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA996E5128645824009A250B /* KeyboardViewController.swift */; };
+		DA996E5428645929009A250B /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA996E5328645929009A250B /* GridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DA996E4628645238009A250B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA996E4928645238009A250B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA996E4B28645238009A250B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA996E5128645824009A250B /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		DA996E5328645929009A250B /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				DA996E4628645238009A250B /* Assets.xcassets */,
 				DA996E4828645238009A250B /* LaunchScreen.storyboard */,
 				DA996E4B28645238009A250B /* Info.plist */,
+				DA996E5128645824009A250B /* KeyboardViewController.swift */,
+				DA996E5328645929009A250B /* GridViewController.swift */,
 			);
 			path = Wordle;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA996E4228645236009A250B /* ViewController.swift in Sources */,
+				DA996E5428645929009A250B /* GridViewController.swift in Sources */,
 				DA996E3E28645236009A250B /* AppDelegate.swift in Sources */,
 				DA996E4028645236009A250B /* SceneDelegate.swift in Sources */,
+				DA996E5228645824009A250B /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
