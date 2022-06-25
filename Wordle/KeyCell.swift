@@ -40,12 +40,24 @@ class KeyCell: UICollectionViewCell {
         label.text = nil
     }
     
-    func configure(with letter: Character){
+    func configure(with letter: Character) {
         if letter == "." {
             label.text = "DEL"
             return
         }
         label.text = String(letter).uppercased()
+    }
+    
+    func configure(with color: Int) {
+        if color == 0 {
+            backgroundColor = .systemGray
+        } else if color == 1 {
+            backgroundColor = .systemOrange
+        } else {
+            backgroundColor = .systemGreen
+        }
+        label.textColor = .white
+        layer.borderWidth = 0
     }
     
 }
