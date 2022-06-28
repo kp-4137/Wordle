@@ -49,7 +49,9 @@ class KeyCell: UICollectionViewCell {
     }
     
     func configure(with color: Int) {
-        if color == 0 {
+        if color == -1 {
+            backgroundColor = .darkGray
+        } else if color == 0 {
             backgroundColor = .systemGray
         } else if color == 1 {
             backgroundColor = .systemOrange
