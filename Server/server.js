@@ -1,26 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const app = express();
-const Data = require('./gameSchema');
 
-mongoose.connect('mongodb://localhost/wordle');
+const Game = require('./gameSchema');
 
-mongoose.connection
-.once("open", () => {
-    console.log("Connected to DB");
-})
-.on("error", (error) => {
-    console.log("Failed to connect to the DB" + error);
-});
+app.use(bodyParser.json());
+
+mongoose.connect('mongodb://localhost/wordle',
+                {useNewUrlParser: true},
+                () => console.log("Connected to DB")
+);
 
 //Create a new game.
 // http://172.16.2.30:8081/create
 app.post("/create", (req, res) => {
-    const game = new Data({
-        answer: req.get("answer"),
-        guesses: req.get("guesses"),
-        status: req.get("status")
-    });
+    const game = new Game(req.body);
 
     game.save().then(() => {
         if(game.isNew){

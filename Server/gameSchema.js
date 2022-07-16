@@ -1,12 +1,18 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const game = new Schema({
-    answer: String,
-    guesses: Array,
-    status: String
+const gameSchema = new mongoose.Schema({
+    answer: {
+        type: String,
+        required: true
+    },
+    guesses: {
+        type: [[String]],
+        required: true
+    },
+    status: {
+        type: String,
+        default: 'Pending'
+    }
 });
 
-const Data = mongoose.model("Data", game);
-
-module.exports = Data;
+module.exports = mongoose.model("Game", gameSchema);
